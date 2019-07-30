@@ -24,11 +24,14 @@ object Operations {
         for (i in n downTo 1){
             if (i1.get(i)>0){
                 inv = subMultiplications(i,i1.get(i),inv)
-
             }
         }
 
         return inv
+    }
+
+    fun multiplication(p1: PerClass, p2: PerClass): PerClass {
+        return PerClass(multiplication(p1.getInversions(), p2.getInversions()))
     }
 
     fun getReverse(inv: Inversions): Inversions {
