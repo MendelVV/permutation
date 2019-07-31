@@ -32,7 +32,7 @@ class TestKellyGraph{
 //        val per = PerClass(Degree(intArrayOf(0, 0, 2)))
 
         //8! - не влезает в Int
-        val n = 7
+        val n = 4
         val graph = KellyGraph(n)
         graph.createGraph()
         val max = factorial(n)
@@ -43,14 +43,14 @@ class TestKellyGraph{
             if (maxLength<res.max()!!){
                 maxLength = res.max()!!
             }
-            /*println()
+            println()
             for (a in res){
                 print("$a ")
-            }*/
-            println("step $i from $max max=$maxLength")
+            }
+//            println("step $i from $max max=$maxLength")
         }
         println(maxLength)
-
     }
+
 
 }

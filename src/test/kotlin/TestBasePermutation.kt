@@ -1,9 +1,16 @@
 import mendel.vasilii.permutation.math.Degree
 import mendel.vasilii.permutation.math.Inversions
 import mendel.vasilii.permutation.math.PerClass
+import mendel.vasilii.permutation.math.PermutationHelper
 import org.junit.Test
 
 class TestBasePermutation {
+
+    @Test
+    fun printPerClass(){
+        val per = PerClass(5)
+        println(per.getDegree())
+    }
 
     @Test
     fun checkCreateDegreeOfInversion(){
@@ -22,6 +29,14 @@ class TestBasePermutation {
         val i2 = Inversions(intArrayOf(0, 1, 0, 1, 4, 0, 3))
         val p2 = PerClass(i2)
         assert(p2.getOrderOnGroup()==2627L)
+    }
+
+    @Test
+    fun checkLength(){
+        val p1 = PerClass(5)
+        val p2 = PerClass(13)
+        val length = PermutationHelper.getLength(p1, p2, 4)
+        println(length)
     }
 
 }

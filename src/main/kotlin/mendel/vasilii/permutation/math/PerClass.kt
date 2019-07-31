@@ -47,6 +47,10 @@ class PerClass {
         return inversions!!
     }
 
+    fun getDegree():Degree{
+        initDegree()
+        return degree!!
+    }
 
     fun getOrderOnGroup():Long{
         //нужно сначала задать степени
@@ -82,7 +86,7 @@ class PerClass {
 
     override fun equals(other: Any?): Boolean {
         if (other is PerClass){
-            return other.getOrderOnGroup()==getOrderOnGroup()
+            return other.getDegree()==getDegree()
         }
         return false
     }

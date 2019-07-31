@@ -12,8 +12,7 @@ class KellyGraph(val n: Int) {
         val max = factorial(n)
         graph = arrayListOf()
         for (i in 0 until max){
-            val a = IntArray(max.toInt())
-            graph.add(a)
+            graph.add(IntArray(max.toInt()))
         }
     }
 

@@ -61,6 +61,11 @@ object Operations {
         return res
     }
 
+    fun conjugate(p1: PerClass, p2: PerClass): PerClass {
+        //p1^-1*p2*p1
+        return PerClass(conjugate(p1.getInversions(),p2.getInversions()))
+    }
+
     private fun addNone(nums: MutableList<Int>, n: Int): MutableList<Int>{
         var i =n
         while (true){
