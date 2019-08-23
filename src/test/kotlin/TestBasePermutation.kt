@@ -1,7 +1,7 @@
-import mendel.vasilii.permutation.math.Degree
-import mendel.vasilii.permutation.math.Inversions
-import mendel.vasilii.permutation.math.PerClass
-import mendel.vasilii.permutation.math.PermutationHelper
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
+import mendel.vasilii.permutation.math.*
 import org.junit.Test
 
 class TestBasePermutation {
@@ -32,11 +32,11 @@ class TestBasePermutation {
     }
 
     @Test
-    fun checkLength(){
-        val p1 = PerClass(5)
-        val p2 = PerClass(13)
-        val length = PermutationHelper.getLength(p1, p2, 4)
-        println(length)
+    fun testMultiplication(){
+        val p1 = PerClass(Degree(intArrayOf(0, 0, 0, 0, 1)))
+        val p2 = PerClass(Degree(intArrayOf(0, 0, 0, 1)))
+        val res = Operations.multiplication(p1, p2)
+        println(res.getDegree())
     }
 
 }

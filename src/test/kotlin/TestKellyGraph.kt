@@ -9,7 +9,7 @@ class TestKellyGraph{
 
     @Test
     fun  testCreateGraph(){
-        val graph = KellyGraph(4)
+        val graph = KellyGraph(3)
         graph.createGraph()
         graph.print()
     }
@@ -49,6 +49,7 @@ class TestKellyGraph{
             }
 //            println("step $i from $max max=$maxLength")
         }
+        println()
         println(maxLength)
     }
 

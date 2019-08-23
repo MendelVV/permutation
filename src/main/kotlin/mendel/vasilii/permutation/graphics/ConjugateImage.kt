@@ -78,7 +78,6 @@ class ConjugateImage(val per: PerClass, val n:Int) {
                 println("-- saved")
             }
         } catch (e: IOException) {
-            // TODO Auto-generated catch block
             e.printStackTrace()
         }*/
 
