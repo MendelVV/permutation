@@ -18,7 +18,7 @@ class GroupOfPermutation() : SetOfPermutation() {
         val setPer = arrayListOf<PerClass>()
         for (p1 in permutations){
             for (p2 in permutations){
-                val res = Operations.multiplication(p1, p2)
+                val res = p1*p2//Operations.multiplication(p1, p2)
                 if (!setPer.contains(res) && !contains(res)){
                     //тогда добавляем в множество
                     setPer.add(res)

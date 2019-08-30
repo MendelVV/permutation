@@ -3,6 +3,10 @@ package mendel.vasilii.permutation.math
 open class SetOfPermutation {
     //множество подстановок
 
+    operator fun contains(other: PerClass): Boolean{
+        return permutations.contains(other)
+    }
+
     val permutations = arrayListOf<PerClass>()
 
     fun get(i: Int):PerClass{
@@ -23,7 +27,7 @@ open class SetOfPermutation {
         permutations.remove(per)
     }
 
-    fun contains(per: PerClass):Boolean{
+/*    fun contains(per: PerClass):Boolean{
         return permutations.contains(per)
-    }
+    }*/
 }

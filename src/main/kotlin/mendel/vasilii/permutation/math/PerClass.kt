@@ -6,7 +6,11 @@ import mendel.vasilii.permutation.exceptions.NotInitInversionsException
 class PerClass {
     //элемент группы перестановок
 
-    infix fun mult(other: PerClass) = Operations.multiplication(this, other)//перемножение этого справа на другой
+//    infix fun mult(other: PerClass) = Operations.multiplication(this, other)//перемножение этого справа на другой
+    operator fun times(other: PerClass): PerClass{
+        return Operations.multiplication(this, other)
+    }
+
     infix fun conj(other: PerClass) = Operations.conjugate(this, other)//сопряжение этим элементом
 
     private var permutation: Permutation? = null//перестановка
